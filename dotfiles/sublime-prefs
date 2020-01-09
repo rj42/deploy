@@ -1,0 +1,19 @@
+{
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"draw_white_space": "all",
+	"dwaw_minimap_border": true,
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80,
+		100
+	],
+	"tab_size": 4,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true
+}
