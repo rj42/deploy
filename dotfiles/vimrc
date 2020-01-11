@@ -195,6 +195,12 @@ syntax enable
 set background=dark
 highlight StatusLineNC cterm=bold ctermfg=white ctermbg=darkgray
 
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 " NerdTree ------------------------------------------------------
 
 " nerdtree for empty command
