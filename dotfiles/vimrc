@@ -215,8 +215,8 @@ noremap vv <c-w>v
 noremap hh <c-w>s
 noremap <c-w>\ <c-w>v
 noremap <c-w>- <c-w>s
-noremap <c-q>  <c-w>q
-noremap <c-w>q  <c-w>q
+nnoremap <c-q> <c-w>q
+inoremap <c-q> <ESC><c-w>q<CR>a
 noremap <c-w><LEFT> <c-w><LEFT>
 noremap <c-w><RIGHT> <c-w><RIGHT>
 noremap <c-w><c-w> <c-w>w
