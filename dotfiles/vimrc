@@ -242,3 +242,11 @@ nmap <c-s> :w<CR>
 " Open splits on the right and below
 set splitbelow
 set splitright
+
+" Move lines
+nnoremap <C-DOWN> :m .+1<CR>==
+nnoremap <C-UP> :m .-2<CR>==
+inoremap <C-DOWN> <Esc>:m .+1<CR>==gi
+inoremap <C-UP> <Esc>:m .-2<CR>==gi
+vnoremap <C-DOWN> :m '>+1<CR>gv=gv
+vnoremap <C-UP> :m '<-2<CR>gv=gv
