@@ -1,0 +1,11 @@
+== Zsh plugins
+* https://github.com/abhigenie92/zsh_to_fish
+
+plugins=(
+    copydir
+    extract
+    git
+    zsh-autosuggestions 
+    zsh-history-substring-search 
+    zsh-syntax-highlighting
+)
