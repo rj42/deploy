@@ -9,3 +9,16 @@ plugins=(
     zsh-history-substring-search 
     zsh-syntax-highlighting
 )
+
+=== Vim
+* nerdtree
+https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree 
+
+* youcompleteme
+https://github.com/Valloric/YouCompleteMe.git
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clangd-completer
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
