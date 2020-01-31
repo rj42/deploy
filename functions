@@ -27,3 +27,7 @@ function swap() {
 function jnote() {
     jupyter notebook --ip='::0' --port 12000  --allow-root --no-browser --NotebookApp.token=''
 }
+
+function cf() {
+    awk -v FC=$1 '(NF==FC){print $0}'
+}
