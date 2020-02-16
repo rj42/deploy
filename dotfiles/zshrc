@@ -133,6 +133,5 @@ stty -ixon
 
 typeset -aU path
 export PATH="/home/rj42/Desktop/trunk/build/bin:${PATH}"
-export PATH="/home/rj42/anaconda3/bin:$PATH"
 
 
