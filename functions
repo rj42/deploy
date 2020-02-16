@@ -29,5 +29,18 @@ function jnote() {
 }
 
 function cf() {
-    awk -v FC=$1 '(NF==FC){print $0}'
+    awk -v FC=$1 '(NF==FC) {print $0}'
+}
+
+function cfn() {
+    cf ${1} <${2} | wc -l
+}
+
+function ns() {
+    F=${1}
+    N=${2:-4}
+    for i in $(seq 2 $(( $N + 1)) );
+    do
+        echo -e "$(( ${i} - 1))\t $(cfn $i ${F})"
+    done
 }
