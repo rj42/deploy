@@ -20,5 +20,9 @@ https://github.com/Valloric/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clangd-completer
 
+* airline
+https://github.com/vim-airline/vim-airline.git
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
