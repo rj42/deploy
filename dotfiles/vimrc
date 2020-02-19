@@ -258,3 +258,7 @@ if has('gui_running')
 else
     set listchars=tab:>.,trail:.,extends:\#,nbsp:.
 endif
+
+" Definition splits
+nnoremap <silent><expr> <c-w>] ':<c-u>'.(winwidth(0) > 79 ? 'vert' : '').' wincmd ]<cr>'
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
