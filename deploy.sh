@@ -34,6 +34,10 @@ copy tmux.conf ~/.tmux.conf
 #
 run "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
+# tmux
+#
+run "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"
+
 # Miscellaneous
 #
 run 'echo -e "\nsource ~/.functions\n" >> ~/.zshrc'
