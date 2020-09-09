@@ -29,5 +29,4 @@ function jnote() {
     jupyter notebook --ip='0.0.0.0' --port ${P} --allow-root --no-browser --NotebookApp.token='' 
 }
 
-alias cdr="cd /place/rj42"
-                               
+#alias cdr="cd /place/rj42"

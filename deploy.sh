@@ -13,7 +13,7 @@ function run() {
 }
 
 function copy() {
-    from=stuff/$1
+    from=dotfiles/$1
     to=$2
     #scp ${from} ${NAME}:${to}
     cp ${from} ${to}
@@ -21,12 +21,11 @@ function copy() {
 
 # zsh
 #
-#run 'sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed "s/chsh -s/#chsh/g")"'
-#run 'sed -i "s|ZSH_THEME=\"robbyrussell\"|ZSH_THEME=\"bureau\"|g" ~/.zshrc'
-#copy bash_profile ~/.bash_profile
-#run 'git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ya | ~/.fzf/install'
+run 'curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -'
+run 'sed -i "s|ZSH_THEME=\"robbyrussell\"|ZSH_THEME=\"bureau\"|g" ~/.zshrc'
+run 'git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ya | ~/.fzf/install'
 
-copy functions ~/.functions
+copy functions.sh ~/.functions
 copy vimrc ~/.vimrc
 copy tmux.conf ~/.tmux.conf
 
@@ -44,7 +43,6 @@ run 'echo -e "\nsource ~/.functions\n" >> ~/.zshrc'
 run 'echo -e "DISABLE_AUTO_TITLE=true\nunsetopt share_history" >>~/.zshrc'
 run 'echo -e "exec zsh" >>~/.bashrc'
 
-# Arcadia/abyss
+# Arcadia
 #
 run 'svn export svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/ya ~/ya'
-run 'curl http://nlp.yandex.ru/_downloads/get-vh.sh | bash -'

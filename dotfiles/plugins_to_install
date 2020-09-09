@@ -1,3 +1,5 @@
+TODO: rewrite!!!
+
 == Zsh plugins
 * https://github.com/abhigenie92/zsh_to_fish
 
@@ -12,10 +14,10 @@ plugins=(
 
 === Vim
 * nerdtree
-https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree 
+git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 
-* youcompleteme
-https://github.com/Valloric/YouCompleteMe.git
+=== YouCompleMe
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleMe
 
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clangd-completer
