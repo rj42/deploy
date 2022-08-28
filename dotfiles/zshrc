@@ -134,4 +134,4 @@ stty -ixon
 typeset -aU path
 export PATH="/home/rj42/Desktop/trunk/build/bin:${PATH}"
 
-
+stty -ixon
