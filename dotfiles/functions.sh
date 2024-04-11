@@ -26,7 +26,37 @@ function swap() {
 
 function jnote() {
     P=${1:-12000}
-    jupyter notebook --ip='0.0.0.0' --port ${P} --allow-root --no-browser --NotebookApp.token='' 
+    jupyter notebook --ip='0.0.0.0' --port ${P} --allow-root --no-browser --NotebookApp.token=''
+}
+
+function sbr {
+    curl proxy.sandbox.yandex-team.ru/$1
+}
+
+function curlnir {
+    curl --insecure -H "Authorization: OAuth $(cat ~/.tokens/nirvana)" ${@}
+}
+
+ function yr() {
+      YT_PROXY=hahn yt read $1 --format "<columns=[$2]>schemaful_dsv" \
+      --config "{read_parallel={enable=%true;max_thread_count=50;}}"
+ }
+
+function yw() {
+    YT_PROXY=hahn yt write-table --table ${1} --format "<columns=[$2]>schemaful_dsv" \
+    --config "{write_parallel={enable=%true;max_thread_count=50;}}"
+}
+
+function diffhtml() {
+  #vimdiff ${1} ${2} -c 'colo default' -c TOhtml -c "w! ${3}" -c 'qa!'
+  N=($# - 1)
+  vimdiff "${@:1:$N}" -c 'colo default' -c TOhtml -c "w! ${@[$#]}" -c 'qa!'
 }
 
 #alias cdr="cd /place/rj42"
+
+alias ya='python ~/ya'
+alias yamake='python ~/ya make -I ~/Desktop/trunk/build/bin -B ~/Desktop/trunk/build'
+alias m=yamake
+
+alias cdp='cd ~/Desktop/projects'
