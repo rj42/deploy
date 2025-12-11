@@ -55,8 +55,8 @@ function diffhtml() {
 
 #alias cdr="cd /place/rj42"
 
-alias ya='python ~/ya'
-alias yamake='python ~/ya make -I ~/Desktop/trunk/build/bin -B ~/Desktop/trunk/build'
+alias ya='~/arcadia/ya'
+alias yamake='~/arcadia/ya make -I ~/arc/build/bin'
 alias m=yamake
 
-alias cdp='cd ~/Desktop/projects'
+alias cdp='cd ~/projects'
