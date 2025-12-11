@@ -23,7 +23,7 @@ function copy() {
 #
 run 'curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -'
 run 'sed -i "s|ZSH_THEME=\"robbyrussell\"|ZSH_THEME=\"bureau\"|g" ~/.zshrc'
-run 'git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ya | ~/.fzf/install'
+run 'git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install'
 
 copy functions.sh ~/.functions
 copy vimrc ~/.vimrc
