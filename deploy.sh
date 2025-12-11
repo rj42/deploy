@@ -43,7 +43,3 @@ run 'echo -e "\nsource ~/.functions\n" >> ~/.zshrc'
 run 'echo -e "DISABLE_AUTO_TITLE=true\nunsetopt share_history" >>~/.zshrc'
 run 'echo -e "stty -ixon" >>~/.bashrc'
 run 'echo -e "exec zsh" >>~/.bashrc'
-
-# Arcadia
-#
-run 'svn export svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/ya ~/ya'
