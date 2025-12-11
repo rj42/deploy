@@ -30,7 +30,7 @@ function jnote() {
 }
 
 function sbr {
-    curl proxy.sandbox.yandex-team.ru/$1
+    curl --insecure -H "Authorization: OAuth $(cat ~/.tokens/nirvana)" proxy.sandbox.yandex-team.ru/$1
 }
 
 function curlnir {
@@ -47,13 +47,27 @@ function yw() {
     --config "{write_parallel={enable=%true;max_thread_count=50;}}"
 }
 
+function ywj() {
+    YT_PROXY=hahn yt write-table --table ${1} --format "<encode_utf8=%false>json" \
+        --config "{write_parallel={enable=%true;max_thread_count=50;}}"
+}
+
+function yrd() {
+  # yrd input_dir output_dir
+  mkdir -p $2
+  for file in $(YT_PROXY=hahn yt list $1); do
+    if [[ ! $file =~ _tmp_path$ ]]; then
+      YT_PROXY=hahn yt read-file ${1}/$file > $2/$file &
+    fi
+  done
+  wait
+}
+
 function diffhtml() {
   #vimdiff ${1} ${2} -c 'colo default' -c TOhtml -c "w! ${3}" -c 'qa!'
   N=($# - 1)
   vimdiff "${@:1:$N}" -c 'colo default' -c TOhtml -c "w! ${@[$#]}" -c 'qa!'
 }
-
-#alias cdr="cd /place/rj42"
 
 alias ya='~/arcadia/ya'
 alias yamake='~/arcadia/ya make -I ~/arc/build/bin'
