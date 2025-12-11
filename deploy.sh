@@ -24,6 +24,7 @@ function copy() {
 run 'curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -'
 run 'sed -i "s|ZSH_THEME=\"robbyrussell\"|ZSH_THEME=\"bureau\"|g" ~/.zshrc'
 run 'git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install'
+run 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 
 copy functions.sh ~/.functions
 copy vimrc ~/.vimrc
