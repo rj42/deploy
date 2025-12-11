@@ -6,6 +6,6 @@ compaudit | xargs chmod g-w,o-w
 
 vim ~/.ssh/config - add to HOST
 arc token store
- arc mount ~/arcadia
+arc mount ~/arcadia
 cd ~/arcadia
 ```
