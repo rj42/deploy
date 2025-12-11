@@ -262,3 +262,5 @@ endif
 " Definition splits
 nnoremap <silent><expr> <c-w>] ':<c-u>'.(winwidth(0) > 79 ? 'vert' : '').' wincmd ]<cr>'
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+set noai nosi nocin inde=
